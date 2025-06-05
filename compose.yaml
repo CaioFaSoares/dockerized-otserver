@@ -24,12 +24,6 @@ services:
     depends_on:
       mysql-svc:
         condition: service_started
-    entrypoint: |
-      /bin/bash -c "
-        apt update && \
-        apt install curl && \
-        curl https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh -o download-prereq.sh && chmod +x ./download-prereq.sh && ./download-prereq.sh
-      "
     environment:
       PMA_HOST: mysql-svc
       PMA_PORT: 3306
@@ -47,12 +41,6 @@ services:
     depends_on:
       mysql-svc:
         condition: service_started
-    entrypoint: |
-      /bin/bash -c "
-        apt update && \
-        apt install curl && \
-        curl https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh -o download-prereq.sh && chmod +x ./download-prereq.sh && ./download-prereq.sh
-      "
     environment:
       DOCKER_NETWORK_GATEWAY_ENV: ${DOCKER_NETWORK_GATEWAY}
       SERVER_NAME_ENV: ${SERVER_NAME}
