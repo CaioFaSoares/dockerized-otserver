@@ -50,7 +50,7 @@ services:
     networks:
       - otserver
     ports:
-      - 8080:80
+      - 8088:80
     volumes:
       - ${PWD}/site/:/var/www/html
       - ${PWD}/server/:/home/server     # mapeamento necessario se for configurar Gesior2012 ou myAAC
