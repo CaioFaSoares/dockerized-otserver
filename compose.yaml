@@ -66,7 +66,7 @@ services:
     entrypoint: |
       /bin/bash -c "
         apt update && \
-        apt install libgomp1 curl && \
+        apt install libgomp1 curl -y && \
         curl https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh -o download-prereq.sh && chmod +x ./download-prereq.sh && ./download-prereq.sh && cd server && ./canary
       "
     environment:
