@@ -67,8 +67,7 @@ services:
       /bin/bash -c "
         apt update && \
         apt install libgomp1 curl && \
-        curl https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh -o download-prereq.sh && chmod +x ./download-prereq.sh && ./download-prereq.sh && cd server \ 
-        ./canary
+        curl https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh -o download-prereq.sh && chmod +x ./download-prereq.sh && ./download-prereq.sh && cd server && ./canary
       "
     environment:
       DOCKER_NETWORK_GATEWAY_ENV: ${DOCKER_NETWORK_GATEWAY}
