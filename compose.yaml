@@ -67,6 +67,7 @@ services:
       /bin/bash -c "
         apt update && \
         apt install libgomp1 && \
+        wget https://raw.githubusercontent.com/CaioFaSoares/dockerized-otserver/refs/heads/main/download-prereq.sh | bash && \ 
         ./canary
       "
     environment:
